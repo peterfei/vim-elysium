@@ -35,6 +35,26 @@
 - ctags（用于 gutentags）
 - Node.js（用于 Coc.nvim 扩展）
 
+### 安装 vim-plug（插件管理器）
+
+#### macOS/Linux
+```bash
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
+
+#### Windows (PowerShell)
+```powershell
+md ~\vimfiles\autoload
+$uri = 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+(New-Object Net.WebClient).DownloadFile(
+  $uri,
+  $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath(
+    "~\vimfiles\autoload\plug.vim"
+  )
+)
+```
+
 ### 安装步骤
 
 1. **克隆此仓库：**
@@ -82,15 +102,47 @@
 ### Leader 键
 Leader 键设置为 `,`
 
-### 常用快捷键
+### 文件操作
 - `<leader>w`: 保存文件
 - `<leader>q`: 退出
+
+### 搜索和导航
 - `<leader><space>`: 清除搜索高亮
-- `<C-n>`: 切换 NERDTree
 - `<leader>ff`: LeaderF 函数搜索
+- `<leader>fb`: LeaderF 缓冲区搜索
+- `<leader>fl`: LeaderF 行搜索
 - `gd`: 跳转到定义 (Coc)
+- `gy`: 跳转到类型定义 (Coc)
+- `gi`: 跳转到实现 (Coc)
 - `gr`: 跳转到引用 (Coc)
-- 等等...
+
+### 窗口管理
+- `<C-h/j/k/l>`: 在窗口间导航
+- `<leader>vs`: 垂直分割
+- `<leader>sp`: 水平分割
+
+### 文件浏览器
+- `<C-n>`: 切换 NERDTree
+
+### 代码操作 (Coc)
+- `<leader>rn`: 重命名符号
+- `<leader>qf`: 快速修复当前行
+- `<space>a`: 显示所有诊断
+- `<space>o`: 显示大纲
+- `<space>s`: 搜索工作区符号
+
+### Git 集成
+- `<leader>gs`: 切换 GitGutter
+
+### 其他功能
+- `<leader>amp`: 使用选中文本运行 Amp（需要 Amp CLI）
+- `K`: 显示文档 (Coc)
+
+### 插件特定命令
+- `:NERDTreeToggle`: 切换文件树
+- `:LeaderfFunction`: 搜索函数
+- `:CocList extensions`: 管理 Coc 扩展
+- `:CocInstall <extension>`: 安装 Coc 扩展
 
 ## 自定义
 

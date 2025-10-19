@@ -35,6 +35,26 @@ A powerful and modular Vim configuration with various plugins for efficient codi
 - ctags (for gutentags)
 - Node.js (for Coc.nvim extensions)
 
+### Install vim-plug (Plugin Manager)
+
+#### macOS/Linux
+```bash
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
+
+#### Windows (PowerShell)
+```powershell
+md ~\vimfiles\autoload
+$uri = 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+(New-Object Net.WebClient).DownloadFile(
+  $uri,
+  $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath(
+    "~\vimfiles\autoload\plug.vim"
+  )
+)
+```
+
 ### Steps
 
 1. **Clone this repository:**
@@ -82,15 +102,47 @@ A powerful and modular Vim configuration with various plugins for efficient codi
 ### Leader Key
 The leader key is set to `,`
 
-### Common Shortcuts
+### File Operations
 - `<leader>w`: Save file
 - `<leader>q`: Quit
+
+### Search and Navigation
 - `<leader><space>`: Clear search highlight
-- `<C-n>`: Toggle NERDTree
 - `<leader>ff`: LeaderF function search
+- `<leader>fb`: LeaderF buffer search
+- `<leader>fl`: LeaderF line search
 - `gd`: Go to definition (Coc)
+- `gy`: Go to type definition (Coc)
+- `gi`: Go to implementation (Coc)
 - `gr`: Go to references (Coc)
-- And more...
+
+### Window Management
+- `<C-h/j/k/l>`: Navigate between windows
+- `<leader>vs`: Vertical split
+- `<leader>sp`: Horizontal split
+
+### File Explorer
+- `<C-n>`: Toggle NERDTree
+
+### Code Actions (Coc)
+- `<leader>rn`: Rename symbol
+- `<leader>qf`: Quick fix current line
+- `<space>a`: Show all diagnostics
+- `<space>o`: Show outline
+- `<space>s`: Search workspace symbols
+
+### Git Integration
+- `<leader>gs`: Toggle GitGutter
+
+### Other Features
+- `<leader>amp`: Run Amp with selected text (requires Amp CLI)
+- `K`: Show documentation (Coc)
+
+### Plugin Specific
+- `:NERDTreeToggle`: Toggle file tree
+- `:LeaderfFunction`: Search functions
+- `:CocList extensions`: Manage Coc extensions
+- `:CocInstall <extension>`: Install Coc extension
 
 ## Customization
 
