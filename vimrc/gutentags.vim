@@ -2,7 +2,6 @@
 set tags=./.tags;,.tags
 
 set autochdir
-let g:gutentags_define_advanced_commands = 1
 let g:gutentags_trace = 0
 let g:gen_tags#verbose = 1
 
@@ -54,8 +53,6 @@ let g:gutentags_auto_add_gtags_cscope = 1
 "Change focus to quickfix window after search (optional).
 let g:gutentags_plus_switch = 1
 "Enable advanced commands: GutentagsToggleTrace, etc.
-let g:gutentags_define_advanced_commands = 1
-"let g:gutentags_trace = 0
 
 ""cscope
 if has("cscope")

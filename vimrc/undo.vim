@@ -1,5 +1,5 @@
 " Let's save undo info!
-set undofile
+
 
 
 " ----------------------------------------------------------------------------
@@ -9,4 +9,4 @@ set undofile
 nnoremap U :MundoToggle<CR>
 let g:mundo_right = 1
 
-
+"
