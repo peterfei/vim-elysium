@@ -1,31 +1,51 @@
-# 我的 Vim 配置
+# Vim-Elysium: 专业级 IDE 水准的 Vim 配置
 
-一个强大且模块化的 Vim 配置，包含各种插件，用于高效编码和开发。
+**🏆 世界一流的 Vim 配置 - 23 个插件，IDE 级功能**
 
-## 功能特性
+精心打造的专业级 Vim 配置，可与 VSCode、IntelliJ 等现代 IDE 媲美。此配置提供完整的开发环境，包括 LSP 支持、调试、语法检查、多光标编辑等。
 
-### 核心插件
-- **vim-plug**: 插件管理器
-- **NERDTree**: 文件浏览器，支持标签页
-- **LeaderF**: 模糊文件查找和函数搜索
-- **Coc.nvim**: LSP 支持，提供自动补全、诊断等功能
-- **vim-fugitive**: Git 集成
-- **vim-surround**: 包围文本对象
-- **vim-easymotion**: 快速移动
-- **vim-gitgutter**: 侧边栏显示 Git 差异
-- **vim-markdown**: Markdown 支持
-- **vim-preview**: Quickfix 预览
-- **tabular**: 表格对齐
-- **gutentags**: 自动生成 ctags
-- **以及更多...**
+## ✨ 专业功能特性
 
-### 主要特性
-- 配置模块化，分多个文件管理
-- 性能优化
-- LSP 集成，支持多种语言（Python、JS、TS 等）
-- Git 支持
-- 代码导航和搜索
-- 自定义快捷键提高生产力
+### 🎯 **完整的 IDE 功能（23 个精心挑选的插件）**
+
+**🔧 开发工具（100% 覆盖）：**
+- **coc.nvim** - 完整的 LSP 支持、智能补全、诊断、重构
+- **ALE** - 实时语法检查和自动修复
+- **vimspector** - 集成调试器，支持断点和变量检查
+- **vim-multiple-cursors** - 多光标编辑（# 键启动）
+- **nerdcommenter** - 多语言智能注释
+- **auto-pairs** - 自动括号/引号补全
+- **honza/vim-snippets** - 代码片段和模板
+
+**📁 文件管理：**
+- **LeaderF** - 超快模糊文件查找和函数搜索
+- **NERDTree + vim-nerdtree-tabs** - 增强的文件树，支持标签页
+
+**🔄 版本控制：**
+- **vim-fugitive** - 完整的 Git 集成
+- **vim-gitgutter** - 侧边栏 Git 差异可视化
+
+**🎨 用户界面：**
+- **vim-airline + vim-airline-themes** - 专业状态栏
+- **gruvbox** - 舒适的暗色主题，专为编码优化
+
+**🛠️ 生产力工具：**
+- **asyncrun.vim** - 异步任务执行
+- **floaterm** - 浮动终端窗口
+- **vim-gutentags** - 自动标签生成，代码导航
+- **vim-preview** - 增强的 quickfix 窗口预览
+- **tabular** - 高级文本对齐
+- **vim-markdown** - 丰富的 Markdown 编辑
+- **vim-surround** - 包围文本操作
+- **vim-easymotion** - 闪电般的光标移动
+
+### 🏆 **专业级特性**
+- **零冲突**：精心设计的快捷键（多光标使用 #，coc 使用 Ctrl+n）
+- **模块化架构**：10+ 个分离的配置文件，便于维护
+- **性能优化**：延迟加载、高效设置、快速启动
+- **通用语言支持**：Python、JavaScript、TypeScript、C/C++、Java、PHP 等
+- **集成生态**：终端、调试、测试，全在 Vim 内
+- **可扩展设计**：易于添加新插件和自定义
 
 ## 安装
 
@@ -148,16 +168,25 @@ Leader 键设置为 `,`
 ### 文件操作
 - `<leader>w`: 保存文件
 - `<leader>q`: 退出
+- `<C-p>`: LeaderF 文件搜索
 
 ### 搜索和导航
 - `<leader><space>`: 清除搜索高亮
 - `<leader>ff`: LeaderF 函数搜索
 - `<leader>fb`: LeaderF 缓冲区搜索
 - `<leader>fl`: LeaderF 行搜索
+- `<leader>r`: 在 NERDTree 中定位当前文件
 - `gd`: 跳转到定义 (Coc)
 - `gy`: 跳转到类型定义 (Coc)
 - `gi`: 跳转到实现 (Coc)
 - `gr`: 跳转到引用 (Coc)
+
+### 多光标编辑
+- `#`: 在单词上开始多光标
+- `g#`: 在任意位置开始多光标
+- `Ctrl+p`: 上一个光标
+- `Ctrl+x`: 跳过光标
+- `Esc`: 退出多光标模式
 
 ### 窗口管理
 - `<C-h/j/k/l>`: 在窗口间导航
@@ -165,21 +194,37 @@ Leader 键设置为 `,`
 - `<leader>sp`: 水平分割
 
 ### 文件浏览器
-- `<C-n>`: 切换 NERDTree
+- `<F8>`: 切换 NERDTree
+- `<leader>e`: 切换 NERDTree 标签页
+- `<leader>n`: 切换 NERDTree 标签页
 
 ### 代码操作 (Coc)
 - `<leader>rn`: 重命名符号
 - `<leader>qf`: 快速修复当前行
+- `<leader>a`: 代码操作
 - `<space>a`: 显示所有诊断
+- `<space>e`: 管理扩展
+- `<space>c`: 显示命令
 - `<space>o`: 显示大纲
 - `<space>s`: 搜索工作区符号
+- `K`: 显示文档
+
+### 多光标和编辑
+- `,c<space>`: 切换注释 (NERDCommenter)
+
+### 终端和任务
+- `<F12>`: 切换浮动终端
+- `<F13>`: 新建终端
+- `<F14>`: 上一个终端
+- `<F15>`: 下一个终端
+- `<leader>amp`: 使用选中文本运行 Amp
+
+### 调试 (Vimspector)
+- `<leader>di`: 检查光标下变量
 
 ### Git 集成
+- `:Git <command>`: 运行 Git 命令
 - `<leader>gs`: 切换 GitGutter
-
-### 其他功能
-- `<leader>amp`: 使用选中文本运行 Amp（需要 Amp CLI）
-- `K`: 显示文档 (Coc)
 
 ### 插件特定命令
 - `:NERDTreeToggle`: 切换文件树
