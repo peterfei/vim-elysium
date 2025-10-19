@@ -114,7 +114,36 @@ call plug#begin('~/.vim/plugged')
     Plug 'plasticboy/vim-markdown'
     " Git 差异显示
     Plug 'airblade/vim-gitgutter'
+    " 状态栏增强
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
+    " 颜色主题
+    Plug 'morhetz/gruvbox'
+    " 多光标编辑
+    Plug 'terryma/vim-multiple-cursors'
+    " 注释操作
+    Plug 'scrooloose/nerdcommenter'
+    " 自动括号
+    Plug 'jiangmiao/auto-pairs'
+    " 浮动终端
+    Plug 'voldikss/vim-floaterm'
+    " 调试器
+    Plug 'puremourning/vimspector'
+    " 语法检查
+    Plug 'dense-analysis/ale'
 call plug#end()
+
+" ========================================
+" 主题和状态栏配置
+" ========================================
+set background=dark
+colorscheme gruvbox
+
+" Airline 配置
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline_theme='gruvbox'
 
 " ========================================
 " 自定义快捷键
@@ -145,6 +174,23 @@ nmap <C-l> <C-w>l
 " Run amp with selected text or word under cursor
 nnoremap <leader>amp :AsyncRun amp -x "<C-R><C-W>"<CR>
 vnoremap <leader>amp :<C-U>AsyncRun amp -x "<C-R>*"<CR>
+
+" 多光标快捷键
+let g:multi_cursor_use_default_mapping=0
+let g:multi_cursor_start_word_key      = '<C-n>'
+let g:multi_cursor_select_all_word_key = '<A-n>'
+let g:multi_cursor_start_key           = 'g<C-n>'
+let g:multi_cursor_select_all_key      = 'g<A-n>'
+let g:multi_cursor_next_key            = '<C-n>'
+let g:multi_cursor_prev_key            = '<C-p>'
+let g:multi_cursor_skip_key            = '<C-x>'
+let g:multi_cursor_quit_key            = '<Esc>'
+
+" 浮动终端
+let g:floaterm_keymap_toggle = '<F12>'
+let g:floaterm_keymap_new    = '<F13>'
+let g:floaterm_keymap_prev   = '<F14>'
+let g:floaterm_keymap_next   = '<F15>'
 
 for s:path in split(glob('~/.vim/vimrc/*.vim'), '')
   exe 'source ' . s:path
