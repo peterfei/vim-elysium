@@ -39,8 +39,8 @@
 
 1. **克隆此仓库：**
    ```bash
-   git clone https://github.com/your-username/vim-elysium.git ~/.vim-elysium
-   cd ~/.vim-config
+   git clone https://github.com/peterfei/vim-elysium.git ~/.vim-elysium
+   cd ~/.vim-elysium
    ```
 
 2. **备份现有 Vim 配置：**

@@ -39,8 +39,8 @@ A powerful and modular Vim configuration with various plugins for efficient codi
 
 1. **Clone this repository:**
    ```bash
-   git clone https://github.com/your-username/vim-elysium.git ~/.vim-elysium
-   cd ~/.vim-config
+   git clone https://github.com/peterfei/vim-elysium.git ~/.vim-elysium
+   cd ~/.vim-elysium
    ```
 
 2. **Backup your existing Vim configuration:**
