@@ -35,6 +35,49 @@
 - ctags（用于 gutentags）
 - Node.js（用于 Coc.nvim 扩展）
 
+### 安装前置要求
+
+#### ctags
+
+Ctags 是 gutentags 插件所需的，用于生成代码导航的标签文件。以下是在不同操作系统上安装 ctags 的说明：
+
+##### macOS
+```bash
+brew install universal-ctags
+```
+或使用 MacPorts：
+```bash
+sudo port install ctags
+```
+
+##### Linux (Ubuntu/Debian)
+```bash
+sudo apt update
+sudo apt install universal-ctags
+```
+
+##### Linux (CentOS/RHEL/Fedora)
+```bash
+# CentOS/RHEL
+sudo yum install ctags
+# Fedora
+sudo dnf install ctags
+```
+
+##### Windows
+使用 Chocolatey：
+```powershell
+choco install universal-ctags
+```
+或从 [universal-ctags releases](https://github.com/universal-ctags/ctags/releases) 下载最新版本并添加到 PATH 中。
+
+#### Node.js
+
+Node.js 是 Coc.nvim 扩展所需的。推荐使用 Node.js 14+ 或更高版本（Coc.nvim 需要 Node.js 12+，但 14+ 更稳定）。
+
+- 下载地址：[nodejs.org](https://nodejs.org/)
+- 或使用包管理器安装（例如 macOS 使用 `brew install node`，Ubuntu 使用 `sudo apt install nodejs`）
+
 ### 安装 vim-plug（插件管理器）
 
 #### macOS/Linux

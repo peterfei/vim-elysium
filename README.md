@@ -35,6 +35,40 @@ A powerful and modular Vim configuration with various plugins for efficient codi
 - ctags (for gutentags)
 - Node.js (for Coc.nvim extensions)
 
+### Installing ctags
+
+Ctags is required for the gutentags plugin to generate tags for code navigation. Here are instructions for installing ctags on different operating systems:
+
+#### macOS
+```bash
+brew install universal-ctags
+```
+Or using MacPorts:
+```bash
+sudo port install ctags
+```
+
+#### Linux (Ubuntu/Debian)
+```bash
+sudo apt update
+sudo apt install universal-ctags
+```
+
+#### Linux (CentOS/RHEL/Fedora)
+```bash
+# For CentOS/RHEL
+sudo yum install ctags
+# Or for Fedora
+sudo dnf install ctags
+```
+
+#### Windows
+Using Chocolatey:
+```powershell
+choco install universal-ctags
+```
+Or download the latest release from [universal-ctags releases](https://github.com/universal-ctags/ctags/releases) and add the executable to your PATH.
+
 ### Install vim-plug (Plugin Manager)
 
 #### macOS/Linux
