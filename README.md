@@ -222,7 +222,6 @@ The leader key is set to `,`
 - `<F13>`: New terminal
 - `<F14>`: Previous terminal
 - `<F15>`: Next terminal
-- `<leader>amp`: Run Amp with selected text
 
 ### Debugging (Vimspector)
 - `<leader>di`: Inspect variable under cursor

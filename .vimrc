@@ -170,10 +170,6 @@ nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
 
-" Amp integration (requires Amp CLI installed)
-" Run amp with selected text or word under cursor
-nnoremap <leader>amp :AsyncRun amp -x "<C-R><C-W>"<CR>
-vnoremap <leader>amp :<C-U>AsyncRun amp -x "<C-R>*"<CR>
 
 " vim-visual-multi 配置
 let g:VM_maps = {}
