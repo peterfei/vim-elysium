@@ -4,6 +4,10 @@
 
 A meticulously crafted, professional-grade Vim configuration that rivals modern IDEs like VSCode and IntelliJ. This setup provides complete development environment with LSP support, debugging, syntax checking, multi-cursor editing, and much more.
 
+## Demo
+
+![Vim-Elysium Demo](vim.gif)
+
 ## ✨ Professional Features
 
 ### 🎯 **Complete IDE Functionality (23 Carefully Selected Plugins)**
