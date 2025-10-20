@@ -175,8 +175,8 @@ The leader key is set to `,`
 ### Multi-Cursor Editing
 - `<Leader>m`: Start multi-cursor on word
 - `g<Leader>m`: Start multi-cursor anywhere
-- `Ctrl+p`: Previous cursor
-- `Ctrl+x`: Skip cursor
+- `Alt+p`: Previous cursor
+- `Alt+s`: Skip cursor
 - `Esc`: Exit multi-cursor mode
 
 ### Window Management
