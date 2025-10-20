@@ -182,8 +182,8 @@ let g:multi_cursor_select_all_word_key = '<Leader>m'
 let g:multi_cursor_start_key           = 'g<Leader>m'
 let g:multi_cursor_select_all_key      = 'g<Leader>m'
 let g:multi_cursor_next_key            = '<Leader>m'
-let g:multi_cursor_prev_key            = '<Leader>p'
-let g:multi_cursor_skip_key            = '<Leader>s'
+let g:multi_cursor_prev_key            = '<Leader>['
+let g:multi_cursor_skip_key            = '<Leader>]'
 let g:multi_cursor_quit_key            = '<Esc>'
 
 " 浮动终端
