@@ -181,6 +181,14 @@ The leader key is set to `,`
 - `<Leader>]`: Skip cursor
 - `Esc`: Exit multi-cursor mode
 
+**Insert Mode Commands (apply to all cursors):**
+- `i`: Insert before each cursor
+- `a`: Insert after each cursor
+- `I`: Insert at start of line for each cursor
+- `A`: Insert at end of line for each cursor
+- `o`: Open new line below each cursor
+- `O`: Open new line above each cursor
+
 ### Window Management
 - `<C-h/j/k/l>`: Navigate between windows
 - `<leader>vs`: Vertical split
