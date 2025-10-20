@@ -120,7 +120,7 @@ call plug#begin('~/.vim/plugged')
     " 颜色主题
     Plug 'morhetz/gruvbox'
     " 多光标编辑
-    Plug 'terryma/vim-multiple-cursors'
+    Plug 'mg979/vim-visual-multi'
     " 注释操作
     Plug 'scrooloose/nerdcommenter'
     " 自动括号
@@ -175,16 +175,19 @@ nmap <C-l> <C-w>l
 nnoremap <leader>amp :AsyncRun amp -x "<C-R><C-W>"<CR>
 vnoremap <leader>amp :<C-U>AsyncRun amp -x "<C-R>*"<CR>
 
-" 多光标快捷键
-let g:multi_cursor_use_default_mapping=0
-let g:multi_cursor_start_word_key      = '<Leader>m'
-let g:multi_cursor_select_all_word_key = '<Leader>m'
-let g:multi_cursor_start_key           = 'g<Leader>m'
-let g:multi_cursor_select_all_key      = 'g<Leader>m'
-let g:multi_cursor_next_key            = '<Leader>m'
-let g:multi_cursor_prev_key            = '<Leader>['
-let g:multi_cursor_skip_key            = '<Leader>]'
-let g:multi_cursor_quit_key            = '<Esc>'
+" vim-visual-multi 配置
+let g:VM_maps = {}
+let g:VM_maps['Find Under']         = '<Leader>m'
+let g:VM_maps['Find Subword Under'] = '<Leader>m'
+let g:VM_maps['Select All']         = 'g<Leader>m'
+let g:VM_maps['Start Regex Search'] = 'g/'
+let g:VM_maps['Add Cursor Down']    = '<C-j>'
+let g:VM_maps['Add Cursor Up']      = '<C-k>'
+let g:VM_maps['Remove Cursor']      = '<Leader>['
+let g:VM_maps['Skip Cursor']        = '<Leader>]'
+let g:VM_maps['Select Cursor Down'] = '<M-C-j>'
+let g:VM_maps['Select Cursor Up']   = '<M-C-k>'
+let g:VM_maps['Exit']               = '<Esc>'
 
 " 浮动终端
 let g:floaterm_keymap_toggle = '<F12>'

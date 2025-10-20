@@ -12,7 +12,7 @@ A meticulously crafted, professional-grade Vim configuration that rivals modern 
 - **coc.nvim** - Full LSP support, intelligent completion, diagnostics, refactoring
 - **ALE** - Real-time syntax checking and auto-fixing
 - **vimspector** - Integrated debugger with breakpoints and variable inspection
-- **vim-multiple-cursors** - Multi-cursor editing (# key activation)
+- **vim-visual-multi** - Advanced multi-cursor editing
 - **nerdcommenter** - Smart commenting for multiple languages
 - **auto-pairs** - Automatic bracket/quote completion
 - **honza/vim-snippets** - Code snippets and templates
@@ -172,10 +172,12 @@ The leader key is set to `,`
 - `gi`: Go to implementation (Coc)
 - `gr`: Go to references (Coc)
 
-### Multi-Cursor Editing
+### Multi-Cursor Editing (vim-visual-multi)
 - `<Leader>m`: Start multi-cursor on word
-- `g<Leader>m`: Start multi-cursor anywhere
-- `<Leader>[`: Previous cursor
+- `g<Leader>m`: Select all occurrences
+- `<C-j>`: Add cursor down
+- `<C-k>`: Add cursor up
+- `<Leader>[`: Remove cursor
 - `<Leader>]`: Skip cursor
 - `Esc`: Exit multi-cursor mode
 

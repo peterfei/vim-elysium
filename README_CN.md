@@ -12,7 +12,7 @@
 - **coc.nvim** - 完整的 LSP 支持、智能补全、诊断、重构
 - **ALE** - 实时语法检查和自动修复
 - **vimspector** - 集成调试器，支持断点和变量检查
-- **vim-multiple-cursors** - 多光标编辑（# 键启动）
+- **vim-visual-multi** - 高级多光标编辑
 - **nerdcommenter** - 多语言智能注释
 - **auto-pairs** - 自动括号/引号补全
 - **honza/vim-snippets** - 代码片段和模板
@@ -181,10 +181,12 @@ Leader 键设置为 `,`
 - `gi`: 跳转到实现 (Coc)
 - `gr`: 跳转到引用 (Coc)
 
-### 多光标编辑
+### 多光标编辑 (vim-visual-multi)
 - `<Leader>m`: 在单词上开始多光标
-- `g<Leader>m`: 在任意位置开始多光标
-- `<Leader>[`: 上一个光标
+- `g<Leader>m`: 选择所有匹配项
+- `<C-j>`: 向下添加光标
+- `<C-k>`: 向上添加光标
+- `<Leader>[`: 移除光标
 - `<Leader>]`: 跳过光标
 - `Esc`: 退出多光标模式
 
