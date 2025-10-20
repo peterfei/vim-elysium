@@ -173,8 +173,8 @@ The leader key is set to `,`
 - `gr`: Go to references (Coc)
 
 ### Multi-Cursor Editing
-- `#`: Start multi-cursor on word
-- `g#`: Start multi-cursor anywhere
+- `<Leader>m`: Start multi-cursor on word
+- `g<Leader>m`: Start multi-cursor anywhere
 - `Ctrl+p`: Previous cursor
 - `Ctrl+x`: Skip cursor
 - `Esc`: Exit multi-cursor mode
